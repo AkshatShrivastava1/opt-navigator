@@ -1,0 +1,21 @@
+# --- Week 1 (cited Q&A MVP) ---
+langchain
+langchain-openai
+langchain-community
+langchain-text-splitters
+openai
+supabase
+fastapi
+uvicorn[standard]
+streamlit
+langfuse
+pypdf
+tiktoken
+python-dotenv
+requests
+beautifulsoup4
+
+# --- Week 2 (uncomment when you add hybrid retrieval / reranking) ---
+# rank-bm25
+# sentence-transformers   # local cross-encoder reranker
+# cohere                  # optional hosted reranker

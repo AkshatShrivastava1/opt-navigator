@@ -1,0 +1,44 @@
+{
+  "01_uscis_opt_for_f1_students.md": {
+    "url": "https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/optional-practical-training-opt-for-f-1-students",
+    "title": "USCIS — Optional Practical Training (OPT) for F-1 Students",
+    "publisher": "USCIS",
+    "last_reviewed": "2024-11-25"
+  },
+  "02_uscis_students_and_employment.md": {
+    "url": "https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/students-and-employment",
+    "title": "USCIS — Students and Employment",
+    "publisher": "USCIS",
+    "last_reviewed": "2025-11-20"
+  },
+  "03_uscis_stem_opt_extension.md": {
+    "url": "https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/optional-practical-training-extension-for-stem-students-stem-opt",
+    "title": "USCIS — Optional Practical Training Extension for STEM Students (STEM OPT)",
+    "publisher": "USCIS",
+    "last_reviewed": "2026-01-30"
+  },
+  "04_uscis_policy_manual_vol2_partF_ch5.md": {
+    "url": "https://www.uscis.gov/policy-manual/volume-2-part-f-chapter-5",
+    "title": "USCIS Policy Manual — Volume 2, Part F, Chapter 5 (Practical Training)",
+    "publisher": "USCIS",
+    "last_reviewed": "2025-02-26"
+  },
+  "05_uscis_cap_gap_extension.md": {
+    "url": "https://www.uscis.gov/working-in-the-united-states/temporary-workers/h-1b-specialty-occupations/extension-of-post-completion-optional-practical-training-opt-and-f-1-status-for-eligible-students",
+    "title": "USCIS — Extension of Post-Completion OPT and F-1 Status under the H-1B Cap-Gap Regulations",
+    "publisher": "USCIS",
+    "last_reviewed": "2025-01-17"
+  },
+  "06_dhs_studyinthestates_f1_opt.md": {
+    "url": "https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-optional-practical-training-opt",
+    "title": "DHS Study in the States (SEVIS Help Hub) — F-1 Optional Practical Training (OPT)",
+    "publisher": "DHS / SEVP",
+    "last_reviewed": "2025-05-19"
+  },
+  "07_uscis_form_i765_ead_application.md": {
+    "url": "https://www.uscis.gov/i-765",
+    "title": "USCIS — Form I-765, Application for Employment Authorization (EAD)",
+    "publisher": "USCIS",
+    "last_reviewed": "2025-08-21"
+  }
+}

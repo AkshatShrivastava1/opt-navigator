@@ -1,0 +1,16 @@
+{"q": "How many days of unemployment am I allowed on post-completion OPT?", "expected": "Up to 90 days of unemployment during post-completion OPT (150 total with the STEM extension)."}
+{"q": "Can I start working before my EAD start date?", "expected": "No. You may not begin OPT until the start date on your EAD."}
+{"q": "When can I apply for post-completion OPT?", "expected": "Up to 90 days before your program end date and no later than 60 days after; within 30 days of the DSO's SEVIS recommendation."}
+{"q": "Does part-time work count toward maintaining OPT status?", "expected": "Post-completion OPT must be at least 20 hours/week; below that you are considered unemployed."}
+{"q": "How long is the grace period after my OPT ends?", "expected": "60 days after the EAD expiration date."}
+{"q": "How long is the STEM OPT extension, and who's eligible?", "expected": "24 months, for students with a qualifying STEM degree, in valid post-completion OPT, with an E-Verify employer."}
+{"q": "Do I need a job offer to apply for OPT?", "expected": "No job offer is required to apply for post-completion OPT."}
+{"q": "How soon must I report a change of employer?", "expected": "Report changes (incl. employer) to your DSO within 10 days."}
+{"q": "Can I travel internationally while on OPT?", "expected": "Generally yes with valid documents; specifics depend on EAD/job offer and cap-gap status. Confirm with DSO."}
+{"q": "What is cap-gap?", "expected": "Automatic extension of F-1 status/OPT bridging the gap to an Oct 1 H-1B start for timely-filed cap-subject petitions."}
+{"q": "Can I do volunteer or unpaid work to avoid unemployment days?", "expected": "Volunteer/unpaid work related to your field, at least 20 hrs/week and not violating labor laws, may count."}
+{"q": "Is self-employment allowed on OPT?", "expected": "Self-employment can qualify on post-completion OPT if the business is related to the field and properly run; not allowed for STEM OPT."}
+{"q": "What happens if my program ends while my OPT application is still pending?", "expected": "Post-completion OPT can be pending after program end; you may not work until the EAD is approved and its start date arrives."}
+{"q": "Can I work for more than one employer on OPT?", "expected": "Yes on regular post-completion OPT (each job related to your field); STEM OPT requires bona fide employer-employee relationships and E-Verify."}
+{"q": "Does my OPT job have to relate to my major?", "expected": "Yes. All OPT employment must be directly related to your major area of study."}
+{"q": "What is the capital of France?", "expected": "OUT OF SCOPE — should refuse: 'I don't have that in my official sources - please confirm with your DSO.'"}

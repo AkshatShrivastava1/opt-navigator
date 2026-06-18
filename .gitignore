@@ -1,0 +1,34 @@
+# Secrets — never commit
+.env
+*.env
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.eggs/
+
+# Data: keep folder + sources manifest, ignore large/binary source dumps
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/*.md
+!data/raw/sources.json
+
+# Tooling / OS
+.DS_Store
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Logs
+*.log
+
+# Internal planning docs - kept local, excluded from public repo
+Week1_Plan_OPT_Navigator.md
+Week1_Plan_OPT_Navigator.pdf
+Week1_Plan_Production_RAG.md
+Week1_Plan_Production_RAG.pdf
