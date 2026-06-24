@@ -1,0 +1,21 @@
+# Render blueprint for the OPT Navigator API (Block 7).
+# Deploy: push to GitHub, then in Render -> New -> Blueprint, point at this repo.
+# Set the three secret env vars in the Render dashboard (sync:false = not stored in git).
+services:
+  - type: web
+    name: opt-navigator-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.api:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_KEY
+        sync: false
+      - key: EMBEDDING_MODEL
+        value: text-embedding-3-small
+      - key: CHAT_MODEL
+        value: gpt-4o-mini

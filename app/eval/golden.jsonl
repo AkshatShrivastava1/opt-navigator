@@ -13,4 +13,4 @@
 {"q": "What happens if my program ends while my OPT application is still pending?", "expected": "Post-completion OPT can be pending after program end; you may not work until the EAD is approved and its start date arrives."}
 {"q": "Can I work for more than one employer on OPT?", "expected": "Yes on regular post-completion OPT (each job related to your field); STEM OPT requires bona fide employer-employee relationships and E-Verify."}
 {"q": "Does my OPT job have to relate to my major?", "expected": "Yes. All OPT employment must be directly related to your major area of study."}
-{"q": "What is the capital of France?", "expected": "OUT OF SCOPE — should refuse: 'I don't have that in my official sources - please confirm with your DSO.'"}
+{"q": "What is the capital of France?", "expected": "OUT OF SCOPE - should refuse.", "expect_refusal": true}
