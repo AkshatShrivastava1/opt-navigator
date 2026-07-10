@@ -16,6 +16,8 @@ class Settings:
 
     EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-small")
     CHAT_MODEL = os.getenv("CHAT_MODEL", "gpt-4o-mini")
+    COHERE_API_KEY = os.getenv("COHERE_API_KEY", "")            # optional: cross-encoder reranking
+    RERANK_MODEL = os.getenv("RERANK_MODEL", "rerank-english-v3.0")
 
     # text-embedding-3-small = 1536 dims (match your pgvector column)
     EMBEDDING_DIM = 1536

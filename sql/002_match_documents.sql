@@ -11,7 +11,9 @@ returns table (
   metadata   jsonb,
   similarity float
 )
-language sql stable as $$
+language sql stable
+set search_path = public          -- pinned (not role-mutable) for security
+as $$
   select
     id,
     content,

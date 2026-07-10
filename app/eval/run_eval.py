@@ -12,9 +12,11 @@ Week 1 baseline accuracy.
 from __future__ import annotations
 
 import json
+import time
 from datetime import date
 from pathlib import Path
 
+from app.config import settings
 from app.generate import answer
 
 HERE = Path(__file__).parent
@@ -58,6 +60,10 @@ def main() -> None:
             f"_retrieved:_ " + ", ".join(h["metadata"].get("source", "?") for h in hits) + "\n"
         )
         print(f"Q{i:>2}: cited={cited_ok}  disclaimer={disclaimer}  refusal_ok={refusal_ok}")
+
+        # Cohere trial keys are capped at 10 calls/min; pace the eval so every question gets reranked.
+        if settings.COHERE_API_KEY and i < len(rows):
+            time.sleep(7)
 
     n = len(rows)
     summary = (

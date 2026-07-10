@@ -40,5 +40,17 @@
     "title": "USCIS — Form I-765, Application for Employment Authorization (EAD)",
     "publisher": "USCIS",
     "last_reviewed": "2025-08-21"
+  },
+  "08_uscis_policy_manual_vol2_partF_ch7_travel.md": {
+    "url": "https://www.uscis.gov/policy-manual/volume-2-part-f-chapter-7",
+    "title": "USCIS Policy Manual — Volume 2, Part F, Chapter 7 (Absences From the United States / Travel)",
+    "publisher": "USCIS",
+    "last_reviewed": "2025-02-26"
+  },
+  "09_dhs_opt_employer_types_reporting.md": {
+    "url": "https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-add-edit-delete-optional-practical",
+    "title": "DHS Study in the States (SEVIS Help Hub) — F-1 Add/Edit/Delete OPT Employer (employment types + reporting)",
+    "publisher": "DHS / SEVP",
+    "last_reviewed": "2024-09-05"
   }
 }

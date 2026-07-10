@@ -18,4 +18,4 @@ beautifulsoup4
 # --- Week 2 (uncomment when you add hybrid retrieval / reranking) ---
 # rank-bm25
 # sentence-transformers   # local cross-encoder reranker
-# cohere                  # optional hosted reranker
+cohere                  # hosted cross-encoder reranker (Week 3 reranking)
