@@ -19,3 +19,7 @@ services:
         value: text-embedding-3-small
       - key: CHAT_MODEL
         value: gpt-4o-mini
+      - key: COHERE_API_KEY
+        sync: false
+      - key: RERANK_MODEL
+        value: rerank-english-v3.0

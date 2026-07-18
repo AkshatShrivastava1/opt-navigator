@@ -127,6 +127,7 @@ planned next measurement.
 - Federal sources only; no school-specific processes yet.
 - Not legal advice; the tool is informational and defers to the DSO.
 - Free-tier hosting: cold starts (~30-60s) and small rate limits.
+- Free-tier Supabase auto-pauses the database after 7 days of no activity — a real ops reality of free infrastructure. Mitigated with a scheduled keep-alive that queries the DB every few days (and restores it if it ever paused); a production setup would use an always-on paid tier or an external uptime cron.
 - The timeline parser depends on the student stating dates clearly; the "what I understood" echo is
   there so a mis-parse is visible and correctable.
 

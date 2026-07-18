@@ -1,0 +1,25 @@
+# Keep the image small and never bake secrets or local-only files into it.
+.env
+*.env
+!.env.example
+.git/
+.venv/
+venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Not needed in the API image (retrieval is via Supabase)
+data/
+tests/
+frontend/
+sql/
+
+# Docs, plans, and local drafts
+*.md
+*.pdf
+Week*_Plan*
+*_linkedin_post.md
+
+.DS_Store
+.streamlit/
