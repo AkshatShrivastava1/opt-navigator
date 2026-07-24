@@ -101,6 +101,10 @@ with timeline_tab:
                 st.markdown(f"{icons.get(it['status'], '•')} **{it['label']}: {it['value']}**")
                 extra = f" — {it['detail']}" if it.get("detail") else ""
                 st.caption(f"{it['rule']} [[source]]({it['citation']}){extra}")
+                if it.get("snippet"):
+                    with st.expander("📄 the official rule, verbatim"):
+                        st.markdown(f"> {it['snippet']}")
+                        st.caption(f"[Read the full source]({it['citation']})")
 
             st.info(
                 "These dates are computed from the information you provided. General information "

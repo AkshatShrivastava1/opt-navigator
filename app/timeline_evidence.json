@@ -1,0 +1,42 @@
+{
+  "apply_window": {
+    "snippet": "Post-completion OPT: A student may apply no earlier than 90 days prior to the student's program end date and no later than 60 days after the student's program end date. Within this 150-day window, the student must file a properly completed application no more than 30 days after the student's DSO enters the OPT recommen\u2026",
+    "source": "https://www.uscis.gov/policy-manual/volume-2-part-f-chapter-5",
+    "title": "USCIS Policy Manual \u2014 Volume 2, Part F, Chapter 5 (Practical Training)"
+  },
+  "file_within_30": {
+    "snippet": "If a student submits the Form I-765 (on paper or electronically) before the DSO recommends the OPT, or after the 30-day post-DSO-recommendation period: - USCIS will deny the application (federal regulations require the DSO OPT recommendation on the student SEVIS record before the Form I-765 is submitted). - The student\u2026",
+    "source": "https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-optional-practical-training-opt",
+    "title": "DHS Study in the States (SEVIS Help Hub) \u2014 F-1 Optional Practical Training (OPT)"
+  },
+  "work_start": {
+    "snippet": "While a Designated School Official (DSO) recommends OPT in SEVIS, it is the student who must apply for the work permit with U.S. Citizenship and Immigration Services (USCIS). If the OPT is approved, USCIS will issue an Employment Authorization Document (EAD). The student must not begin working before the start date on \u2026",
+    "source": "https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-optional-practical-training-opt",
+    "title": "DHS Study in the States (SEVIS Help Hub) \u2014 F-1 Optional Practical Training (OPT)"
+  },
+  "opt_duration": {
+    "snippet": "Post-completion OPT begins on the date USCIS adjudicates the employment authorization request or the date the DSO requests, whichever is later. A student may not request a start date that is more than 60 days after the student's program end date. A student must complete all practical training within a 14-month period f\u2026",
+    "source": "https://www.uscis.gov/policy-manual/volume-2-part-f-chapter-5",
+    "title": "USCIS Policy Manual \u2014 Volume 2, Part F, Chapter 5 (Practical Training)"
+  },
+  "grace_period": {
+    "snippet": "An F-1 student who has completed an authorized period of post-completion OPT may remain in F-1 status for 60 days beyond the EAD expiration date. This is commonly known as a grace period, during which the F-1 student may contact their DSO to change their education level, transfer to another SEVP-certified school, or fi\u2026",
+    "source": "https://www.uscis.gov/policy-manual/volume-2-part-f-chapter-5",
+    "title": "USCIS Policy Manual \u2014 Volume 2, Part F, Chapter 5 (Practical Training)"
+  },
+  "unemployment": {
+    "snippet": "### Unemployment during the OPT Period You may be unemployed during your OPT period for a limited number of days. - If you received initial post-completion OPT only: You may be unemployed for up to 90 days, for a total of 90 days during the OPT period. - If you received the 24-month extension: You may be unemployed for\u2026",
+    "source": "https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/optional-practical-training-extension-for-stem-students-stem-opt",
+    "title": "USCIS \u2014 Optional Practical Training Extension for STEM Students (STEM OPT)"
+  },
+  "stem_window": {
+    "snippet": "STEM OPT extension: - Must apply after your DSO enters the recommendation for OPT into your SEVIS record, and - Must apply within 60 days after your DSO enters the recommendation for OPT into your SEVIS record, and - May apply up to 90 days before your current OPT employment authorization expires. You may not begin you\u2026",
+    "source": "https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/optional-practical-training-opt-for-f-1-students",
+    "title": "USCIS \u2014 Optional Practical Training (OPT) for F-1 Students"
+  },
+  "stem_duration": {
+    "snippet": "Validity Period: The STEM OPT extension begins the day after the initial post-completion OPT expires, not on the date of adjudication, and ends 24 months thereafter, regardless of the date the actual extension is approved. Filing during the cap-gap extension does not change the STEM OPT extension start date. STEM OPT i\u2026",
+    "source": "https://www.uscis.gov/policy-manual/volume-2-part-f-chapter-5",
+    "title": "USCIS Policy Manual \u2014 Volume 2, Part F, Chapter 5 (Practical Training)"
+  }
+}

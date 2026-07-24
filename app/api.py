@@ -7,6 +7,7 @@ from pydantic import BaseModel
 from app.generate import answer
 from app.timeline import build_timeline
 from app.timeline_parse import parse_situation, situation_to_dict
+from app.timeline_evidence import attach_evidence
 
 app = FastAPI(title="OPT Navigator API")
 
@@ -34,7 +35,8 @@ class TimelineQ(BaseModel):
 def timeline(q: TimelineQ) -> dict:
     """Parse the student's situation (LLM) -> compute dates deterministically -> cited items."""
     s = parse_situation(q.situation)
+    items = attach_evidence(build_timeline(s))
     return {
         "parsed": situation_to_dict(s),
-        "timeline": [it.to_dict() for it in build_timeline(s)],
+        "timeline": [it.to_dict() for it in items],
     }

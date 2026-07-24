@@ -65,6 +65,7 @@ class TimelineItem:
     citation: str                 # source URL for that rule
     status: str = "info"          # info | warning | danger
     detail: str = ""
+    snippet: str = ""             # verbatim supporting text from the official source (attached later)
 
     def to_dict(self) -> dict:
         return {
@@ -76,6 +77,7 @@ class TimelineItem:
             "citation": self.citation,
             "status": self.status,
             "detail": self.detail,
+            "snippet": self.snippet,
         }
 
 
