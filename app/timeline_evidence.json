@@ -14,11 +14,6 @@
     "source": "https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-optional-practical-training-opt",
     "title": "DHS Study in the States (SEVIS Help Hub) \u2014 F-1 Optional Practical Training (OPT)"
   },
-  "opt_duration": {
-    "snippet": "Post-completion OPT begins on the date USCIS adjudicates the employment authorization request or the date the DSO requests, whichever is later. A student may not request a start date that is more than 60 days after the student's program end date. A student must complete all practical training within a 14-month period f\u2026",
-    "source": "https://www.uscis.gov/policy-manual/volume-2-part-f-chapter-5",
-    "title": "USCIS Policy Manual \u2014 Volume 2, Part F, Chapter 5 (Practical Training)"
-  },
   "grace_period": {
     "snippet": "An F-1 student who has completed an authorized period of post-completion OPT may remain in F-1 status for 60 days beyond the EAD expiration date. This is commonly known as a grace period, during which the F-1 student may contact their DSO to change their education level, transfer to another SEVP-certified school, or fi\u2026",
     "source": "https://www.uscis.gov/policy-manual/volume-2-part-f-chapter-5",
@@ -38,5 +33,10 @@
     "snippet": "Validity Period: The STEM OPT extension begins the day after the initial post-completion OPT expires, not on the date of adjudication, and ends 24 months thereafter, regardless of the date the actual extension is approved. Filing during the cap-gap extension does not change the STEM OPT extension start date. STEM OPT i\u2026",
     "source": "https://www.uscis.gov/policy-manual/volume-2-part-f-chapter-5",
     "title": "USCIS Policy Manual \u2014 Volume 2, Part F, Chapter 5 (Practical Training)"
+  },
+  "opt_duration": {
+    "snippet": "Eligible students can apply to receive up to 12 months of OPT employment authorization before completing their academic studies (pre-completion) and/or after completing their academic studies (post-completion).",
+    "source": "https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/optional-practical-training-opt-for-f-1-students",
+    "title": "USCIS \u2014 Optional Practical Training (OPT) for F-1 Students"
   }
 }

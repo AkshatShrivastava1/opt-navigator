@@ -5,6 +5,8 @@
 🔗 **Live demo:** https://opt-navigator-bcmpeyc9h48ebvdwrlh4wc.streamlit.app
 🔗 **API (Swagger):** https://opt-navigator-api.onrender.com/docs
 
+![OPT Navigator answering an OPT question with citations to official sources](docs/screenshot.png)
+
 > ⚠️ Informational only, **not legal advice**. Every answer says so, and the assistant refuses rather than guesses. Always confirm with your DSO or an immigration attorney.
 
 ---

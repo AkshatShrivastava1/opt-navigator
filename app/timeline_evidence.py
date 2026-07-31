@@ -21,7 +21,6 @@ RULE_QUERIES = {
     "apply_window": "When can I apply for post-completion OPT relative to my program end date?",
     "file_within_30": "How soon must I file Form I-765 after my DSO recommends OPT in SEVIS?",
     "work_start": "Can I start working before my EAD start date?",
-    "opt_duration": "How long is post-completion OPT authorized for?",
     "grace_period": "How long is the grace period after my OPT ends?",
     "unemployment": "How many days of unemployment am I allowed on post-completion OPT and STEM OPT?",
     "stem_window": "When can I file the STEM OPT extension?",
@@ -40,6 +39,23 @@ ITEM_TO_RULE = {
     "unemployment_limit": "unemployment",
     "stem_apply_earliest": "stem_window",
     "stem_end": "stem_duration",
+}
+
+# Retrieval doesn't reliably surface the crispest passage for a couple of fixed rules,
+# so we pin a human-curated verbatim quote (from the corpus) for those.
+RULE_OVERRIDES = {
+    "opt_duration": {
+        "snippet": (
+            "Eligible students can apply to receive up to 12 months of OPT employment "
+            "authorization before completing their academic studies (pre-completion) and/or "
+            "after completing their academic studies (post-completion)."
+        ),
+        "source": (
+            "https://www.uscis.gov/working-in-the-united-states/students-and-exchange-"
+            "visitors/optional-practical-training-opt-for-f-1-students"
+        ),
+        "title": "USCIS — Optional Practical Training (OPT) for F-1 Students",
+    },
 }
 
 _MAX = 320  # snippet length cap
@@ -66,6 +82,9 @@ def build_evidence() -> dict:
             "title": top["metadata"].get("title", ""),
         }
         print(f"  {rule}: {evidence[rule]['title']}")
+    for rule, ev in RULE_OVERRIDES.items():          # pin curated quotes where retrieval underperforms
+        evidence[rule] = ev
+        print(f"  {rule}: (curated) {ev['title']}")
     EVIDENCE_PATH.write_text(json.dumps(evidence, indent=2))
     print(f"\nWrote {len(evidence)} rules to {EVIDENCE_PATH}")
     return evidence
