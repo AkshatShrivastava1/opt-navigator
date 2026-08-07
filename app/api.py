@@ -8,6 +8,7 @@ from app.generate import answer
 from app.timeline import build_timeline
 from app.timeline_parse import parse_situation, situation_to_dict
 from app.timeline_evidence import attach_evidence
+from app.reminders import send_reminders
 
 app = FastAPI(title="OPT Navigator API")
 
@@ -40,3 +41,16 @@ def timeline(q: TimelineQ) -> dict:
         "parsed": situation_to_dict(s),
         "timeline": [it.to_dict() for it in items],
     }
+
+
+class RemindQ(BaseModel):
+    situation: str
+    email: str
+
+
+@app.post("/remind")
+def remind(q: RemindQ) -> dict:
+    """Parse -> compute timeline -> email the upcoming deadlines (via Resend)."""
+    s = parse_situation(q.situation)
+    items = [it.to_dict() for it in attach_evidence(build_timeline(s))]
+    return send_reminders(items, q.email)

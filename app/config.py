@@ -18,6 +18,8 @@ class Settings:
     CHAT_MODEL = os.getenv("CHAT_MODEL", "gpt-4o-mini")
     COHERE_API_KEY = os.getenv("COHERE_API_KEY", "")            # optional: cross-encoder reranking
     RERANK_MODEL = os.getenv("RERANK_MODEL", "rerank-english-v3.0")
+    RESEND_API_KEY = os.getenv("RESEND_API_KEY", "")            # optional: email deadline reminders
+    REMINDER_FROM = os.getenv("REMINDER_FROM", "OPT Navigator <onboarding@resend.dev>")
 
     # text-embedding-3-small = 1536 dims (match your pgvector column)
     EMBEDDING_DIM = 1536

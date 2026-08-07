@@ -110,3 +110,25 @@ with timeline_tab:
                 "These dates are computed from the information you provided. General information "
                 "from official sources, not legal advice - confirm with your DSO."
             )
+
+    if situation:
+        st.divider()
+        st.caption("Don't want to track these yourself? Get the upcoming ones emailed to you.")
+        remind_email = st.text_input("Your email", key="remind_email", placeholder="you@school.edu")
+        if st.button("📧 Email me my deadlines") and remind_email:
+            try:
+                with st.spinner("Sending..."):
+                    rr = requests.post(
+                        f"{API_URL}/remind",
+                        json={"situation": situation, "email": remind_email},
+                        timeout=120,
+                    )
+                    rr.raise_for_status()
+                    res = rr.json()
+            except requests.exceptions.RequestException as e:
+                st.error(f"Couldn't reach the API at {API_URL}. ({e})")
+            else:
+                if res.get("sent"):
+                    st.success(f"Sent {res['count']} upcoming deadline(s) to {remind_email}.")
+                else:
+                    st.warning(res.get("reason", "Nothing was sent."))
