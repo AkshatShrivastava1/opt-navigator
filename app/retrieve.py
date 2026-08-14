@@ -65,6 +65,12 @@ def retrieve(query: str, k: int = 5, fetch_k: int = 20) -> list[dict]:
     return _rerank(query, res.data, k)
 
 
+def ping_db() -> bool:
+    """Lightweight DB read to keep the free-tier project awake (used by GET /keepalive)."""
+    _sb.table("documents").select("id", count="exact").limit(1).execute()
+    return True
+
+
 if __name__ == "__main__":
     for h in retrieve("Do I need a job offer to apply for OPT?"):
         score = h.get("rerank_score", h.get("similarity"))

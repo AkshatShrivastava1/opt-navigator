@@ -9,6 +9,7 @@ from app.timeline import build_timeline
 from app.timeline_parse import parse_situation, situation_to_dict
 from app.timeline_evidence import attach_evidence
 from app.reminders import send_reminders
+from app.retrieve import ping_db
 
 app = FastAPI(title="OPT Navigator API")
 
@@ -20,6 +21,17 @@ class Q(BaseModel):
 @app.get("/health")
 def health() -> dict:
     return {"status": "ok"}
+
+
+@app.get("/keepalive")
+def keepalive() -> dict:
+    """Deliberately touch the DB so the free-tier project doesn't idle-pause (for an external cron).
+    Kept separate from /health, which must stay cheap and not depend on external services."""
+    try:
+        ping_db()
+        return {"ok": True}
+    except Exception as e:  # noqa: BLE001
+        return {"ok": False, "error": str(e)[:120]}
 
 
 @app.post("/ask")
