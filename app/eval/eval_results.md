@@ -1,9 +1,9 @@
-# Eval baseline - 2026-07-02
+# Eval baseline - 2026-08-27
 
 - Questions: **16**
-- Citation present (or correct refusal): **15/16**
+- Citation present (or correct refusal): **16/16**
 - Not-legal-advice line present: **16/16**
-- Refusal correct (refuses iff out-of-scope): **15/16**
+- Refusal correct (refuses iff out-of-scope): **16/16**
 
 > These are automatic guard checks. Eyeball factual correctness in the 'correct?' column, then record that % as your Week 1 baseline.
 
@@ -15,7 +15,7 @@
 | 4 | Does part-time work count toward maintaining OPT status? | ✅ | ✅ | ✅ |  |
 | 5 | How long is the grace period after my OPT ends? | ✅ | ✅ | ✅ |  |
 | 6 | How long is the STEM OPT extension, and who's eligible? | ✅ | ✅ | ✅ |  |
-| 7 | Do I need a job offer to apply for OPT? | ❌ | ✅ | ❌ |  |
+| 7 | Do I need a job offer to apply for OPT? | ✅ | ✅ | ✅ |  |
 | 8 | How soon must I report a change of employer? | ✅ | ✅ | ✅ |  |
 | 9 | Can I travel internationally while on OPT? | ✅ | ✅ | ✅ |  |
 | 10 | What is cap-gap? | ✅ | ✅ | ✅ |  |
@@ -48,9 +48,9 @@ _retrieved:_ https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-
 
 You can apply for post-completion Optional Practical Training (OPT) under the following conditions:
 
-- You must apply no earlier than 90 days prior to your program end date. [source: https://www.uscis.gov/policy-manual/volume-2-part-f-chapter-5]
+- You must apply no earlier than 90 days before your program end date. [source: https://www.uscis.gov/policy-manual/volume-2-part-f-chapter-5]
 - You must apply no later than 60 days after your program end date. [source: https://www.uscis.gov/policy-manual/volume-2-part-f-chapter-5]
-- You must file a properly completed application no more than 30 days after your Designated School Official (DSO) enters the OPT recommendation into your SEVIS record. [source: https://www.uscis.gov/policy-manual/volume-2-part-f-chapter-5]
+- You must file a properly completed application within 30 days after your Designated School Official (DSO) enters the OPT recommendation into the Student and Exchange Visitor Information System (SEVIS). [source: https://www.uscis.gov/policy-manual/volume-2-part-f-chapter-5]
 
 This is general information from official sources, not legal advice. Confirm your specific situation with your school's DSO or an immigration attorney.
 
@@ -88,11 +88,13 @@ _retrieved:_ https://www.uscis.gov/working-in-the-united-states/students-and-exc
 
 ### Q7. Do I need a job offer to apply for OPT?
 
-I don't have that in my official sources - please confirm with your DSO. 
+- No, a job offer or employer is not required to apply for Optional Practical Training (OPT) [source: https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-optional-practical-training-opt].
+- Eligibility to apply for OPT is based on academic enrollment and status, the Designated School Official's (DSO) recommendation, and a properly filed Form I-765, not on having secured employment [source: https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-optional-practical-training-opt].
+- However, students authorized for post-completion OPT are expected to be employed and may accrue no more than 90 days of unemployment [source: https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-optional-practical-training-opt].
 
 This is general information from official sources, not legal advice. Confirm your specific situation with your school's DSO or an immigration attorney.
 
-_retrieved:_ https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/optional-practical-training-opt-for-f-1-students, https://www.uscis.gov/policy-manual/volume-2-part-f-chapter-5, https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-optional-practical-training-opt, https://www.uscis.gov/i-765, https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/optional-practical-training-extension-for-stem-students-stem-opt
+_retrieved:_ https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-optional-practical-training-opt, https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-optional-practical-training-opt, https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/optional-practical-training-opt-for-f-1-students, https://www.uscis.gov/policy-manual/volume-2-part-f-chapter-5, https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-optional-practical-training-opt
 
 ### Q8. How soon must I report a change of employer?
 
@@ -143,16 +145,16 @@ _retrieved:_ https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-
 
 ### Q12. Is self-employment allowed on OPT?
 
-- A student may be self-employed on post-completion OPT. If self-employed, SEVIS populates the employer name with the student's name; the student enters the primary location where the work is performed (a residence, office, or formal business) [source: https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-add-edit-delete-optional-practical].
+- A student may be self-employed on post-completion OPT, but SEVIS populates the employer name with the student's name, and the student must enter the primary location where the work is performed [source: https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-add-edit-delete-optional-practical].
 - However, students on the STEM OPT extension cannot be self-employed [source: https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-add-edit-delete-optional-practical].
 
 This is general information from official sources, not legal advice. Confirm your specific situation with your school's DSO or an immigration attorney.
 
-_retrieved:_ https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-add-edit-delete-optional-practical, https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-add-edit-delete-optional-practical, https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/optional-practical-training-extension-for-stem-students-stem-opt, https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-optional-practical-training-opt, https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/optional-practical-training-extension-for-stem-students-stem-opt
+_retrieved:_ https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-add-edit-delete-optional-practical, https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-add-edit-delete-optional-practical, https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/optional-practical-training-extension-for-stem-students-stem-opt, https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-optional-practical-training-opt, https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-optional-practical-training-opt
 
 ### Q13. What happens if my program ends while my OPT application is still pending?
 
-If your program ends while your Optional Practical Training (OPT) application is still pending, your F-1 status will remain valid as long as you comply with all requirements for maintaining your student status. However, you may not begin your OPT until your Form I-765 is approved and you receive your Employment Authorization Document (EAD) [source: https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/optional-practical-training-opt-for-f-1-students]. 
+If your program ends while your Optional Practical Training (OPT) application is still pending, your F-1 status will remain valid as long as you comply with all requirements for maintaining your student status. However, you may not begin your pre- or post-completion OPT until after your Form I-765 is approved and you receive your Employment Authorization Document (EAD) [source: https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/optional-practical-training-opt-for-f-1-students]. 
 
 This is general information from official sources, not legal advice. Confirm your specific situation with your school's DSO or an immigration attorney.
 
@@ -168,7 +170,7 @@ _retrieved:_ https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-
 
 ### Q15. Does my OPT job have to relate to my major?
 
-Yes, your Optional Practical Training (OPT) job must be directly related to your major area of study. This requirement applies to both pre-completion and post-completion OPT [source: https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/optional-practical-training-opt-for-f-1-students]. It is the student's responsibility to explain the relationship between their employment and their major [source: https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-add-edit-delete-optional-practical].
+Yes, your Optional Practical Training (OPT) job must be directly related to your major area of study. This requirement applies to both pre-completion and post-completion OPT [source: https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/optional-practical-training-opt-for-f-1-students]. It is the student's responsibility to explain the relationship between their employment and their major area of study [source: https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-add-edit-delete-optional-practical].
 
 This is general information from official sources, not legal advice. Confirm your specific situation with your school's DSO or an immigration attorney.
 
