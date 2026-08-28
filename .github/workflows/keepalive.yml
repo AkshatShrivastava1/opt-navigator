@@ -1,0 +1,33 @@
+name: supabase-keepalive
+
+# Why this exists:
+# The Supabase free tier pauses a project after ~7 days of inactivity. Week 9's
+# keep-alive relied on a third-party web cron hitting the app's /keepalive route,
+# which only works if BOTH that cron fires AND the Render service is awake to
+# forward the read. This workflow removes those dependencies: GitHub Actions
+# reads the database DIRECTLY on a schedule, so the only thing that has to be up
+# is Supabase itself. A failed read turns the run red, giving a visible signal.
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"   # every 12 hours (well under the ~7-day pause window)
+  workflow_dispatch: {}        # allow a manual run from the Actions tab
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read one row from the documents table
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: |
+          set -euo pipefail
+          # A real REST read counts as project activity and resets the idle timer.
+          # --fail makes a non-2xx response exit non-zero so the job goes red.
+          curl --fail --silent --show-error \
+            "${SUPABASE_URL}/rest/v1/documents?select=id&limit=1" \
+            -H "apikey: ${SUPABASE_SERVICE_KEY}" \
+            -H "Authorization: Bearer ${SUPABASE_SERVICE_KEY}" \
+            > /dev/null
+          echo "keepalive read OK"

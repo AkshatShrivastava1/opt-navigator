@@ -52,5 +52,11 @@
     "title": "DHS Study in the States (SEVIS Help Hub) — F-1 Add/Edit/Delete OPT Employer (employment types + reporting)",
     "publisher": "DHS / SEVP",
     "last_reviewed": "2024-09-05"
+  },
+  "10_sevp_job_offer_not_required_to_apply.md": {
+    "url": "https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment/f-1-optional-practical-training-opt",
+    "title": "DHS Study in the States (SEVIS Help Hub) — F-1 OPT (job offer / employer not required to apply)",
+    "publisher": "DHS / SEVP",
+    "last_reviewed": "2025-05-19"
   }
 }
