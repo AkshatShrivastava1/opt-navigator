@@ -14,3 +14,17 @@
 {"q": "Can I work for more than one employer on OPT?", "expected": "Yes on regular post-completion OPT (each job related to your field); STEM OPT requires bona fide employer-employee relationships and E-Verify."}
 {"q": "Does my OPT job have to relate to my major?", "expected": "Yes. All OPT employment must be directly related to your major area of study."}
 {"q": "What is the capital of France?", "expected": "OUT OF SCOPE - should refuse.", "expect_refusal": true}
+{"q": "How many hours can I work on pre-completion OPT while school is in session?", "expected": "20 hours or less per week while school is in session; full time when school is not in session."}
+{"q": "Does time on pre-completion OPT reduce my post-completion OPT?", "expected": "Yes. Pre-completion OPT is deducted from post-completion OPT; a full year of full-time pre-completion OPT removes the post-completion year."}
+{"q": "What happens if my STEM OPT extension is still pending when my current OPT expires?", "expected": "If the STEM extension was filed on time and OPT expires while it is pending, employment authorization is automatically extended for up to 180 days."}
+{"q": "How long can my OPT request stay in Requested status before it is canceled?", "expected": "An OPT request left in Requested status longer than 180 days is automatically canceled by SEVIS."}
+{"q": "What happens if I go over 90 days of unemployment on post-completion OPT?", "expected": "Exceeding 90 days of unemployment (150 with the STEM extension) can lead SEVP to terminate your SEVIS record."}
+{"q": "How do I apply for the EAD, and which form do I file?", "expected": "File Form I-765 (Application for Employment Authorization) with USCIS, with the fee and required documentation, after your DSO recommends OPT in SEVIS."}
+{"q": "Does my STEM OPT employer need to be enrolled in E-Verify?", "expected": "Yes. The STEM OPT extension requires employment with an employer enrolled in E-Verify."}
+{"q": "How many months of OPT can I get for one degree level?", "expected": "Up to 12 months of OPT per education level; changing to a higher education level makes you eligible for another 12 months."}
+{"q": "Must I report to my DSO if I have no employer or become unemployed?", "expected": "Yes. Report changes or interruptions in employment; a record with no current employer information counts as unemployment."}
+{"q": "Do I pay Social Security and Medicare (FICA) taxes on my OPT income?", "expected": "Not covered by the official OPT sources - should refuse and defer to DSO/tax guidance.", "expect_refusal": true}
+{"q": "Can I apply for a green card while I'm on OPT?", "expected": "Adjustment of status is out of scope for these sources - should refuse and defer to DSO/attorney.", "expect_refusal": true}
+{"q": "What are my chances in the H-1B lottery?", "expected": "Not addressed in the OPT sources - should refuse.", "expect_refusal": true}
+{"q": "What is the current USCIS processing time for my OPT application right now?", "expected": "Live processing times are not in the static sources - should refuse and point to USCIS/DSO.", "expect_refusal": true}
+{"q": "Will my OPT application definitely be approved if I file everything on time?", "expected": "The sources do not guarantee approval - should refuse to promise an outcome and defer to DSO.", "expect_refusal": true}
