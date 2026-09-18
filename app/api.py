@@ -10,6 +10,7 @@ from app.timeline_parse import parse_situation, situation_to_dict
 from app.timeline_evidence import attach_evidence
 from app.reminders import send_reminders
 from app.retrieve import ping_db
+from app.feedback import save_feedback
 
 app = FastAPI(title="OPT Navigator API")
 
@@ -66,3 +67,17 @@ def remind(q: RemindQ) -> dict:
     s = parse_situation(q.situation)
     items = [it.to_dict() for it in attach_evidence(build_timeline(s))]
     return send_reminders(items, q.email)
+
+
+class FeedbackQ(BaseModel):
+    question: str
+    answer: str
+    rating: str                       # "up" | "down"
+    comment: str | None = None
+    sources: list[dict] | None = None
+
+
+@app.post("/feedback")
+def feedback(f: FeedbackQ) -> dict:
+    """Persist a thumbs up/down (+ optional comment) on an answer for later review."""
+    return save_feedback(f.question, f.answer, f.rating, f.comment, f.sources)

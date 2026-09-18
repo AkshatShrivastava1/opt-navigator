@@ -115,6 +115,9 @@ EXAMPLES = [
 
 def _run_ask(question: str) -> None:
     """Call /ask and stash the result in session_state so it survives reruns."""
+    # New question -> reset any prior feedback state so the widget shows fresh.
+    for k in ("fb_done", "fb_comment"):
+        st.session_state.pop(k, None)
     try:
         with st.spinner(
             "Searching official sources… (first request after idle can take ~30–60s "
@@ -133,6 +136,31 @@ def _use_example(text: str) -> None:
     """on_click callback: fill the box and flag an auto-run (runs before the next rerun)."""
     st.session_state.ask_box = text
     st.session_state._trigger_ask = True
+
+
+def _send_feedback(rating: str) -> None:
+    """on_click callback: POST a thumbs up/down (+ comment) for the current answer."""
+    res = st.session_state.get("ask_result")
+    if not res or res.get("error"):
+        return
+    data = res["data"]
+    try:
+        rr = requests.post(
+            f"{API_URL}/feedback",
+            json={
+                "question": res.get("q", ""),
+                "answer": data.get("answer", ""),
+                "rating": rating,
+                "comment": st.session_state.get("fb_comment") or None,
+                "sources": data.get("sources", []),
+            },
+            timeout=30,
+        )
+        rr.raise_for_status()
+        ok = bool(rr.json().get("saved"))
+    except requests.exceptions.RequestException:
+        ok = False
+    st.session_state.fb_done = {"q": res.get("q"), "rating": rating, "ok": ok}
 
 
 ask_tab, timeline_tab = st.tabs(["💬 Ask a question", "🗓️ My OPT timeline"])
@@ -176,6 +204,24 @@ with ask_tab:
             if links:
                 st.markdown("**Sources**")
                 st.markdown("".join(links), unsafe_allow_html=True)
+
+            # --- feedback ---
+            st.divider()
+            fb = st.session_state.get("fb_done")
+            if fb and fb.get("q") == res.get("q"):
+                if fb.get("ok"):
+                    st.caption("✅ Thanks for the feedback!")
+                else:
+                    st.caption("Thanks — I couldn't save that just now, but noted.")
+            else:
+                st.caption("Was this answer helpful?")
+                fc1, fc2, _ = st.columns([1, 1, 8])
+                fc1.button("👍", key="fb_up", on_click=_send_feedback, args=("up",))
+                fc2.button("👎", key="fb_down", on_click=_send_feedback, args=("down",))
+                st.text_input(
+                    "Optional: tell us more", key="fb_comment",
+                    placeholder="What was helpful, wrong, or missing?",
+                )
 
 # ================================================================ My OPT timeline
 with timeline_tab:
