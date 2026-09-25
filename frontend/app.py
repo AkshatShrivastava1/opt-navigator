@@ -116,7 +116,7 @@ EXAMPLES = [
 def _run_ask(question: str) -> None:
     """Call /ask and stash the result in session_state so it survives reruns."""
     # New question -> reset any prior feedback state so the widget shows fresh.
-    for k in ("fb_done", "fb_comment"):
+    for k in ("fb_done", "fb_comment", "fb_rating"):
         st.session_state.pop(k, None)
     try:
         with st.spinner(
@@ -138,10 +138,20 @@ def _use_example(text: str) -> None:
     st.session_state._trigger_ask = True
 
 
-def _send_feedback(rating: str) -> None:
-    """on_click callback: POST a thumbs up/down (+ comment) for the current answer."""
+def _select_rating(rating: str) -> None:
+    """on_click callback: just record the chosen 👍/👎 — does NOT submit.
+
+    Selecting a rating and submitting it are deliberately separate so the user can add a
+    comment before sending; clicking a thumb no longer fires the request (Week 15 fix).
+    """
+    st.session_state.fb_rating = rating
+
+
+def _send_feedback() -> None:
+    """on_click callback: POST the selected rating + the (optional) comment together."""
     res = st.session_state.get("ask_result")
-    if not res or res.get("error"):
+    rating = st.session_state.get("fb_rating")
+    if not res or res.get("error") or rating not in ("up", "down"):
         return
     data = res["data"]
     try:
@@ -161,6 +171,7 @@ def _send_feedback(rating: str) -> None:
     except requests.exceptions.RequestException:
         ok = False
     st.session_state.fb_done = {"q": res.get("q"), "rating": rating, "ok": ok}
+    st.session_state.pop("fb_rating", None)
 
 
 ask_tab, timeline_tab = st.tabs(["💬 Ask a question", "🗓️ My OPT timeline"])
@@ -205,7 +216,7 @@ with ask_tab:
                 st.markdown("**Sources**")
                 st.markdown("".join(links), unsafe_allow_html=True)
 
-            # --- feedback ---
+            # --- feedback (rating and submit are separate so comments get captured) ---
             st.divider()
             fb = st.session_state.get("fb_done")
             if fb and fb.get("q") == res.get("q"):
@@ -215,13 +226,22 @@ with ask_tab:
                     st.caption("Thanks — I couldn't save that just now, but noted.")
             else:
                 st.caption("Was this answer helpful?")
+                sel = st.session_state.get("fb_rating")
                 fc1, fc2, _ = st.columns([1, 1, 8])
-                fc1.button("👍", key="fb_up", on_click=_send_feedback, args=("up",))
-                fc2.button("👎", key="fb_down", on_click=_send_feedback, args=("down",))
+                fc1.button("👍" + (" ✓" if sel == "up" else ""), key="fb_up",
+                           on_click=_select_rating, args=("up",))
+                fc2.button("👎" + (" ✓" if sel == "down" else ""), key="fb_down",
+                           on_click=_select_rating, args=("down",))
                 st.text_input(
-                    "Optional: tell us more", key="fb_comment",
+                    "Optional: add a comment", key="fb_comment",
                     placeholder="What was helpful, wrong, or missing?",
                 )
+                if sel:
+                    st.caption(f"Selected: {'👍 helpful' if sel == 'up' else '👎 not helpful'}")
+                    st.button("Send feedback", type="primary", key="fb_send",
+                              on_click=_send_feedback)
+                else:
+                    st.caption("Pick 👍 or 👎, add a comment if you like, then hit Send.")
 
 # ================================================================ My OPT timeline
 with timeline_tab:
